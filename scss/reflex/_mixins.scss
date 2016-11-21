@@ -30,14 +30,21 @@
 }
 
 // defaults for all cols
-@mixin setupCols() {
-    @include display-flex();
-    @include resetWhitespace();
+@mixin setupCols($flex: false) {
+    @include whitespace();
     position: relative;
     width: 100%;
     vertical-align: top;
     padding: $reflex-grid-spacing;
-    flex-direction: column;
+
+    @if $flex {
+        @include display-flex();
+        flex-direction: column;
+    } @else {
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+    }
 }
 
 // defaults for auto cols
