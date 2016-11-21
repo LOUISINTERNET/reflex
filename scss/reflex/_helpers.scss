@@ -1,7 +1,14 @@
-
 // --------------------------------------------------
 // grid modifiers
 // --------------------------------------------------
+
+.#{$reflex-prefix}grid--full {
+    max-width: $reflex-full-width;
+}
+
+.#{$reflex-prefix}grid--max {
+    max-width: $reflex-max-width;
+}
 
 // --------------------------------------------------
 // grid nesting
@@ -221,6 +228,11 @@
 // --------------------------------------------------
 // grid__cell modifiers
 // --------------------------------------------------
+
+.#{$reflex-prefix}grid__cell--flex {
+    @include display-flex();
+    flex-direction: column;
+}
 
 .#{$reflex-prefix}grid__cell--padding-sm {
     padding: $reflex-cell-spacing-sm;
