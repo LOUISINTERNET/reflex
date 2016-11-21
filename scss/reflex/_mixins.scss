@@ -59,41 +59,41 @@
 // --------------------------------------------------
 
 @mixin whitespace($reset: true) {
-    @if $reset {
-        letter-spacing: normal;
-        word-spacing: normal;
-        white-space: normal;
-    } @else {
-        letter-spacing: -0.31em !important;
-        *letter-spacing: normal !important;
-        word-spacing: -0.43em !important;
+    @if $reflex-old-browser {
+        @if $reset {
+            letter-spacing: normal;
+            word-spacing: normal;
+            white-space: normal;
+        } @else {
+            letter-spacing: -0.31em !important;
+            *letter-spacing: normal !important;
+            word-spacing: -0.43em !important;
+        }
     }
 }
 
 @mixin resetTextAlign() {
-    //
-    // We want to reset any text-align properties set by the grid
-    // (required for the inline-block fallback)
-    // but we don't want to override any text-align properties
-    // set on the individual grid__col-x element
-    // or on any of it's child elements
-    //
-    // The "initial" property is not widely supported so a default of "left" and "start" is provided
-    // http://caniuse.com/#search=initial
-    //
-    // 1) set to left by default (works everywhere)
-    // 2) set to start (respects right to left text)
-    // 3) set to initial
-    //
-    text-align: left;
-    text-align: start;
-    text-align: initial;
-    -moz-text-align-last: left;
-    -moz-text-align-last: start;
-    -moz-text-align-last: initial;
-    text-align-last: left;
-    text-align-last: start;
-    text-align-last: initial;
+    @if $reflex-old-browser {
+        // We want to reset any text-align properties set by the grid
+        // (required for the inline-block fallback)
+        // but we don't want to override any text-align properties
+        // set on the individual grid__col-x element
+        // or on any of it's child elements
+        //
+        // The "initial" property is not widely supported so a default of "left" and "start" is provided
+        // http://caniuse.com/#search=initial
+        //
+        // 1) set to left by default (works everywhere)
+        // 2) set to start (respects right to left text)
+        // 3) set to initial
+
+        text-align: left;
+        text-align: start;
+        text-align: initial;
+        text-align-last: left;
+        text-align-last: start;
+        text-align-last: initial;
+    }
 }
 
 // --------------------------------------------------
