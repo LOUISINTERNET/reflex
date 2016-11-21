@@ -17,15 +17,15 @@
 // --------------------------------------------------
 
 .#{$reflex-prefix}grid--wrap {
-    @include flex-wrap(wrap);
+    flex-wrap: wrap;
 }
 
 .#{$reflex-prefix}grid--no-wrap {
-    @include flex-wrap(nowrap);
+    flex-wrap: nowrap;
 }
 
 .#{$reflex-prefix}grid--wrap-reverse {
-    @include flex-wrap(wrap-reverse);
+    flex-wrap: wrap-reverse;
 }
 
 // --------------------------------------------------
@@ -33,19 +33,19 @@
 // --------------------------------------------------
 
 .#{$reflex-prefix}grid--direction-row {
-    @include flex-direction(row);
+    flex-direction: row;
 }
 
 .#{$reflex-prefix}grid--direction-row-reverse {
-    @include flex-direction(row-reverse);
+    flex-direction: row-reverse;
 }
 
 .#{$reflex-prefix}grid--direction-column {
-    @include flex-direction(column);
+    flex-direction: column;
 }
 
 .#{$reflex-prefix}grid--direction-column-reverse {
-    @include flex-direction(column-reverse);
+    flex-direction: column-reverse;
 }
 
 // --------------------------------------------------
@@ -53,11 +53,11 @@
 // --------------------------------------------------
 
 .#{$reflex-prefix}grid--align-start {
-    @include align-items(flex-start);
+    align-items: flex-start;
 }
 
 .#{$reflex-prefix}grid--align-end {
-    @include align-items(flex-end);
+    align-items: flex-end;
 
     // fallback to legacy vertical-align
     [class*="#{$reflex-prefix}grid__col-"] {
@@ -66,7 +66,7 @@
 }
 
 .#{$reflex-prefix}grid--align-center {
-    @include align-items(center);
+    align-items: center;
 
     // fallback to legacy vertical-align
     [class*="#{$reflex-prefix}grid__col-"] {
@@ -75,7 +75,7 @@
 }
 
 .#{$reflex-prefix}grid--align-baseline {
-    @include align-items(baseline);
+    align-items: baseline;
 
     // fallback to legacy vertical-align
     [class*="#{$reflex-prefix}grid__col-"] {
@@ -88,11 +88,11 @@
 // --------------------------------------------------
 
 .#{$reflex-prefix}grid--align-content-start {
-    @include align-content(flex-start);
+    align-content: flex-start;
 }
 
 .#{$reflex-prefix}grid--align-content-end {
-    @include align-content(flex-end);
+    align-content: flex-end;
 
     // fallback to legacy vertical-align
     [class*="#{$reflex-prefix}grid__col-"] {
@@ -101,43 +101,41 @@
 }
 
 .#{$reflex-prefix}grid--align-content-center {
-    @include align-content(center);
+    align-content: center;
 }
 
 .#{$reflex-prefix}grid--align-content-space-between {
-    @include align-content(space-between);
+    align-content: space-between;
 }
 
 .#{$reflex-prefix}grid--align-content-space-around {
-    @include align-content(space-around);
+    align-content: space-around;
 }
-
-
 
 // --------------------------------------------------
 // align-self
 // --------------------------------------------------
 
 .#{$reflex-prefix}grid--align-self-stretch {
-    @include align-self(stretch);
+    align-self: stretch;
 }
 
 .#{$reflex-prefix}grid--align-self-start {
-    @include align-self(flex-start);
+    align-self: flex-start;
 }
 
 .#{$reflex-prefix}grid--align-self-end {
-    @include align-self(flex-end);
+    align-self: flex-end;
     vertical-align: bottom;
 }
 
 .#{$reflex-prefix}grid--align-self-center {
-    @include align-self(center);
+    align-self: center;
     vertical-align: middle;
 }
 
 .#{$reflex-prefix}grid--align-self-baseline {
-    @include align-self(baseline);
+    align-self: baseline;
     vertical-align: baseline;
 }
 
@@ -146,11 +144,14 @@
 // --------------------------------------------------
 
 .#{$reflex-prefix}grid--justify-start {
-    @include justify-content-start();
+    text-align: left;
+    justify-content: flex-start;
 }
 
 .#{$reflex-prefix}grid--justify-end {
-    @include justify-content-end();
+    text-align: right;
+    text-align-last: right;
+    justify-content: flex-end;
 
     .#{$reflex-prefix}grid__cell,
     [class*="#{$reflex-prefix}grid__col-"] {
@@ -159,7 +160,9 @@
 }
 
 .#{$reflex-prefix}grid--justify-center {
-    @include justify-content-center();
+    text-align: center;
+    text-align-last: center;
+    justify-content: center;
 
     .#{$reflex-prefix}grid__cell,
     [class*="#{$reflex-prefix}grid__col-"] {
@@ -168,7 +171,9 @@
 }
 
 .#{$reflex-prefix}grid--justify-space-between {
-    @include justify-content-space-between();
+    text-align: justify;
+    text-align-last: justify;
+    justify-content: space-between;
 
     .#{$reflex-prefix}grid__cell,
     [class*="#{$reflex-prefix}grid__col-"] {
@@ -177,7 +182,9 @@
 }
 
 .#{$reflex-prefix}grid--justify-space-around {
-    @include justify-content-space-around();
+    text-align: justify;
+    text-align-last: justify;
+    justify-content: space-around;
 
     .#{$reflex-prefix}grid__cell,
     [class*="#{$reflex-prefix}grid__col-"] {
@@ -211,8 +218,8 @@
 
 .#{$reflex-prefix}grid__cell-img {
     display: block;
-    @include display-flex-only();
-    @include flex(0, 0, auto);
+    display: flex;
+    flex: 0 0 auto;
     margin-left: 0;
     margin-right: 0;
     max-width: 100%;
