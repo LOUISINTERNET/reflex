@@ -14,7 +14,6 @@
     @if $type == width and $index > 0 {
         .#{$reflex-prefix}#{$class}#{$index} {
             width: percentage(($index / $reflex-columns));
-            *width: percentage(($index / $reflex-columns)) - 0.1;
 
             //for ie6 support you can uncomment this line but it will increase css filesize dramatically
             //@include setupCols();
@@ -43,7 +42,7 @@
 
 // defaults for auto cols
 @mixin setupAutoCols() {
-    @include flex(1, 0, 0px); // a unit on last value is required by IE10-11
+    flex: 1 0 auto;
     width: auto !important;
     max-width: 100%;
 }
