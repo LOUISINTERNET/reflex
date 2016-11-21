@@ -70,26 +70,25 @@ _:-ms-fullscreen, :root .grid__cell {
 
 @include make-reflex-grid(grid__col-);
 
-@media (min-width: $reflex-xs) {
+@media only screen and (min-width: $reflex-xs) {
     @include make-reflex-grid(grid__col-xs-);
 }
 
-@media (min-width: $reflex-sm) {
+@media only screen and (min-width: $reflex-sm) {
     @include make-reflex-grid(grid__col-sm-);
 }
 
-@media (min-width: $reflex-md) {
+@media only screen and (min-width: $reflex-md) {
     @include make-reflex-grid(grid__col-md-);
 }
 
-@media (min-width: $reflex-lg) {
+@media only screen and (min-width: $reflex-lg) {
     @include make-reflex-grid(grid__col-lg-);
 }
 
-@media (min-width: $reflex-xlg) {
+@media only screen and (min-width: $reflex-xlg) {
     @include make-reflex-grid(grid__col-xlg-);
 }
-
 
 // --------------------------------------------------
 // reflex grid__col-auto
@@ -99,31 +98,31 @@ _:-ms-fullscreen, :root .grid__cell {
     @include setupAutoCols();
 }
 
-@media (min-width: $reflex-xs) {
+@media only screen and (min-width: $reflex-xs) {
     .#{$reflex-prefix}grid__col-xs-auto {
         @include setupAutoCols();
     }
 }
 
-@media (min-width: $reflex-sm) {
+@media only screen and (min-width: $reflex-sm) {
     .#{$reflex-prefix}grid__col-sm-auto {
         @include setupAutoCols();
     }
 }
 
-@media (min-width: $reflex-md) {
+@media only screen and (min-width: $reflex-md) {
     .#{$reflex-prefix}grid__col-md-auto {
         @include setupAutoCols();
     }
 }
 
-@media (min-width: $reflex-lg) {
+@media only screen and (min-width: $reflex-lg) {
     .#{$reflex-prefix}grid__col-lg-auto {
         @include setupAutoCols();
     }
 }
 
-@media (min-width: $reflex-xlg) {
+@media only screen and (min-width: $reflex-xlg) {
     .#{$reflex-prefix}grid__col-xlg-auto {
         @include setupAutoCols();
     }
