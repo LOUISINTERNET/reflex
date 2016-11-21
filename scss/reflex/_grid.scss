@@ -25,9 +25,11 @@
     }
 
     // handle nested grids
-    & .#{$reflex-prefix}grid {
+    .#{$reflex-prefix}grid {
         width: auto;
         flex: 1 1 auto;
+        margin-left: -$reflex-cell-spacing;
+        margin-right: -$reflex-cell-spacing;
     }
 
     // Reset the box-sizing so our grid works properly

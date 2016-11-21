@@ -4,8 +4,26 @@
 // --------------------------------------------------
 
 // --------------------------------------------------
+// grid nesting
+// --------------------------------------------------
+
+.#{$reflex-prefix}grid--nested {
+    margin-left: -$reflex-cell-spacing !important;
+    margin-right: -$reflex-cell-spacing !important;
+    width: auto;
+    max-width: none;
+}
+
+.#{$reflex-prefix}grid--not-nested {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: none;
+}
+
+// --------------------------------------------------
 // grid full bleed (no internal padding)
 // --------------------------------------------------
+
 .#{$reflex-prefix}grid--bleed {
     [class*="#{$reflex-prefix}grid__col-"] {
         padding: 0;
