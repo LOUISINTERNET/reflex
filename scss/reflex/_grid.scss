@@ -3,44 +3,44 @@
 // --------------------------------------------------
 
 .#{$reflex-prefix}grid {
-    @include display-flex();
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0 auto;
-    position: relative;
-    width: 100%;
-    max-width: $reflex-max-width;
+  @include display-flex();
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  max-width: $reflex-max-width;
 
-    @include whitespace(false);
+  @include whitespace(false);
 
-    &:before,
-    &:after {
-        @include whitespace();
-        max-width: 100%;
-    }
+  &:before,
+  &:after {
+    @include whitespace();
+    max-width: 100%;
+  }
 
-    *:before,
-    *:after {
-        @include whitespace();
-    }
+  *:before,
+  *:after {
+    @include whitespace();
+  }
 
-    // handle nested grids
-    .#{$reflex-prefix}grid {
-        width: auto;
-        flex: 1 1 auto;
-        margin-left: -$reflex-cell-spacing;
-        margin-right: -$reflex-cell-spacing;
-    }
+  // handle nested grids
+  .#{$reflex-prefix}grid {
+    width: auto;
+    flex: 1 1 auto;
+    margin-left: -$reflex-cell-spacing;
+    margin-right: -$reflex-cell-spacing;
+  }
 
-    // Reset the box-sizing so our grid works properly
-    *,
-    *:before,
-    *:after {
-        box-sizing: border-box;
-    }
+  // Reset the box-sizing so our grid works properly
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
 
-    // handle when lists are used as a grid
-    list-style-type: none;
+  // handle when lists are used as a grid
+  list-style-type: none;
 }
 
 // --------------------------------------------------
@@ -48,7 +48,7 @@
 // --------------------------------------------------
 
 [class*="#{$reflex-prefix}grid__col-"] {
-    @include setupCols();
+  @include setupCols();
 }
 
 // --------------------------------------------------
@@ -56,14 +56,14 @@
 // --------------------------------------------------
 
 .#{$reflex-prefix}grid__cell {
-    position: relative;
-    display: block;
-    flex: 1 1 auto;
+  position: relative;
+  display: block;
+  flex: 1 1 auto;
 }
 
 // ie11 hack
 _:-ms-fullscreen, :root .grid__cell {
-    width: 100%;
+  width: 100%;
 }
 
 // --------------------------------------------------
@@ -73,23 +73,23 @@ _:-ms-fullscreen, :root .grid__cell {
 @include make-reflex-grid(grid__col-);
 
 @media only screen and (min-width: $reflex-xs) {
-    @include make-reflex-grid(grid__col-xs-);
+  @include make-reflex-grid(grid__col-xs-);
 }
 
 @media only screen and (min-width: $reflex-sm) {
-    @include make-reflex-grid(grid__col-sm-);
+  @include make-reflex-grid(grid__col-sm-);
 }
 
 @media only screen and (min-width: $reflex-md) {
-    @include make-reflex-grid(grid__col-md-);
+  @include make-reflex-grid(grid__col-md-);
 }
 
 @media only screen and (min-width: $reflex-lg) {
-    @include make-reflex-grid(grid__col-lg-);
+  @include make-reflex-grid(grid__col-lg-);
 }
 
 @media only screen and (min-width: $reflex-xlg) {
-    @include make-reflex-grid(grid__col-xlg-);
+  @include make-reflex-grid(grid__col-xlg-);
 }
 
 // --------------------------------------------------
@@ -97,37 +97,37 @@ _:-ms-fullscreen, :root .grid__cell {
 // --------------------------------------------------
 
 .#{$reflex-prefix}grid__col-auto {
-    @include setupAutoCols();
+  @include setupAutoCols();
 }
 
 @media only screen and (min-width: $reflex-xs) {
-    .#{$reflex-prefix}grid__col-xs-auto {
-        @include setupAutoCols();
-    }
+  .#{$reflex-prefix}grid__col-xs-auto {
+    @include setupAutoCols();
+  }
 }
 
 @media only screen and (min-width: $reflex-sm) {
-    .#{$reflex-prefix}grid__col-sm-auto {
-        @include setupAutoCols();
-    }
+  .#{$reflex-prefix}grid__col-sm-auto {
+    @include setupAutoCols();
+  }
 }
 
 @media only screen and (min-width: $reflex-md) {
-    .#{$reflex-prefix}grid__col-md-auto {
-        @include setupAutoCols();
-    }
+  .#{$reflex-prefix}grid__col-md-auto {
+    @include setupAutoCols();
+  }
 }
 
 @media only screen and (min-width: $reflex-lg) {
-    .#{$reflex-prefix}grid__col-lg-auto {
-        @include setupAutoCols();
-    }
+  .#{$reflex-prefix}grid__col-lg-auto {
+    @include setupAutoCols();
+  }
 }
 
 @media only screen and (min-width: $reflex-xlg) {
-    .#{$reflex-prefix}grid__col-xlg-auto {
-        @include setupAutoCols();
-    }
+  .#{$reflex-prefix}grid__col-xlg-auto {
+    @include setupAutoCols();
+  }
 }
 
 // --------------------------------------------------
@@ -137,23 +137,23 @@ _:-ms-fullscreen, :root .grid__cell {
 @include make-grid--order-helpers();
 
 @media only screen and (min-width: $reflex-xs) {
-    @include loop-grid--order-helpers($reflex-columns, '-xs');
+  @include loop-grid--order-helpers($reflex-columns, '-xs');
 }
 
 @media only screen and (min-width: $reflex-sm) {
-    @include loop-grid--order-helpers($reflex-columns, '-sm');
+  @include loop-grid--order-helpers($reflex-columns, '-sm');
 }
 
 @media only screen and (min-width: $reflex-md) {
-    @include loop-grid--order-helpers($reflex-columns, '-md');
+  @include loop-grid--order-helpers($reflex-columns, '-md');
 }
 
 @media only screen and (min-width: $reflex-lg) {
-    @include loop-grid--order-helpers($reflex-columns, '-lg');
+  @include loop-grid--order-helpers($reflex-columns, '-lg');
 }
 
 @media only screen and (min-width: $reflex-xlg) {
-    @include loop-grid--order-helpers($reflex-columns, '-xlg');
+  @include loop-grid--order-helpers($reflex-columns, '-xlg');
 }
 
 // --------------------------------------------------

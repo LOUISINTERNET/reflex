@@ -26,11 +26,11 @@ $reflex-xlg: 1600px !default;
 
 // Spacing
 // -------------------------
-$reflex-grid-spacing:       0 1em !default;
-$reflex-cell-spacing:       1em !default;
+$reflex-grid-spacing: 0 1em !default;
+$reflex-cell-spacing: 1em !default;
 
-$reflex-cell-spacing-sm:    ($reflex-cell-spacing / 2);
-$reflex-cell-spacing-md:    $reflex-cell-spacing;
-$reflex-cell-spacing-lg:    ($reflex-cell-spacing * 2);
+$reflex-cell-spacing-sm: ($reflex-cell-spacing / 2);
+$reflex-cell-spacing-md: $reflex-cell-spacing;
+$reflex-cell-spacing-lg: ($reflex-cell-spacing * 2);
 
-$reflex-old-browser:        true !default;
+$reflex-old-browser: true !default;

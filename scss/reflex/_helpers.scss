@@ -3,11 +3,11 @@
 // --------------------------------------------------
 
 .#{$reflex-prefix}grid--full {
-    max-width: $reflex-full-width;
+  max-width: $reflex-full-width;
 }
 
 .#{$reflex-prefix}grid--max {
-    max-width: $reflex-max-width;
+  max-width: $reflex-max-width;
 }
 
 // --------------------------------------------------
@@ -15,16 +15,16 @@
 // --------------------------------------------------
 
 .#{$reflex-prefix}grid--nested {
-    margin-left: -$reflex-cell-spacing !important;
-    margin-right: -$reflex-cell-spacing !important;
-    width: auto;
-    max-width: none;
+  margin-left: -$reflex-cell-spacing !important;
+  margin-right: -$reflex-cell-spacing !important;
+  width: auto;
+  max-width: none;
 }
 
 .#{$reflex-prefix}grid--not-nested {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    max-width: none;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: none;
 }
 
 // --------------------------------------------------
@@ -32,9 +32,9 @@
 // --------------------------------------------------
 
 .#{$reflex-prefix}grid--bleed {
-    [class*="#{$reflex-prefix}grid__col-"] {
-        padding: 0;
-    }
+  [class*="#{$reflex-prefix}grid__col-"] {
+    padding: 0;
+  }
 }
 
 // --------------------------------------------------
@@ -42,15 +42,15 @@
 // --------------------------------------------------
 
 .#{$reflex-prefix}grid--wrap {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .#{$reflex-prefix}grid--no-wrap {
-    flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .#{$reflex-prefix}grid--wrap-reverse {
-    flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
 }
 
 // --------------------------------------------------
@@ -58,19 +58,19 @@
 // --------------------------------------------------
 
 .#{$reflex-prefix}grid--direction-row {
-    flex-direction: row;
+  flex-direction: row;
 }
 
 .#{$reflex-prefix}grid--direction-row-reverse {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .#{$reflex-prefix}grid--direction-column {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .#{$reflex-prefix}grid--direction-column-reverse {
-    flex-direction: column-reverse;
+  flex-direction: column-reverse;
 }
 
 // --------------------------------------------------
@@ -78,34 +78,34 @@
 // --------------------------------------------------
 
 .#{$reflex-prefix}grid--align-start {
-    align-items: flex-start;
+  align-items: flex-start;
 }
 
 .#{$reflex-prefix}grid--align-end {
-    align-items: flex-end;
+  align-items: flex-end;
 
-    // fallback to legacy vertical-align
-    [class*="#{$reflex-prefix}grid__col-"] {
-        vertical-align: bottom;
-    }
+  // fallback to legacy vertical-align
+  [class*="#{$reflex-prefix}grid__col-"] {
+    vertical-align: bottom;
+  }
 }
 
 .#{$reflex-prefix}grid--align-center {
-    align-items: center;
+  align-items: center;
 
-    // fallback to legacy vertical-align
-    [class*="#{$reflex-prefix}grid__col-"] {
-        vertical-align: middle;
-    }
+  // fallback to legacy vertical-align
+  [class*="#{$reflex-prefix}grid__col-"] {
+    vertical-align: middle;
+  }
 }
 
 .#{$reflex-prefix}grid--align-baseline {
-    align-items: baseline;
+  align-items: baseline;
 
-    // fallback to legacy vertical-align
-    [class*="#{$reflex-prefix}grid__col-"] {
-        vertical-align: baseline;
-    }
+  // fallback to legacy vertical-align
+  [class*="#{$reflex-prefix}grid__col-"] {
+    vertical-align: baseline;
+  }
 }
 
 // --------------------------------------------------
@@ -113,28 +113,28 @@
 // --------------------------------------------------
 
 .#{$reflex-prefix}grid--align-content-start {
-    align-content: flex-start;
+  align-content: flex-start;
 }
 
 .#{$reflex-prefix}grid--align-content-end {
-    align-content: flex-end;
+  align-content: flex-end;
 
-    // fallback to legacy vertical-align
-    [class*="#{$reflex-prefix}grid__col-"] {
-        vertical-align: bottom;
-    }
+  // fallback to legacy vertical-align
+  [class*="#{$reflex-prefix}grid__col-"] {
+    vertical-align: bottom;
+  }
 }
 
 .#{$reflex-prefix}grid--align-content-center {
-    align-content: center;
+  align-content: center;
 }
 
 .#{$reflex-prefix}grid--align-content-space-between {
-    align-content: space-between;
+  align-content: space-between;
 }
 
 .#{$reflex-prefix}grid--align-content-space-around {
-    align-content: space-around;
+  align-content: space-around;
 }
 
 // --------------------------------------------------
@@ -142,26 +142,26 @@
 // --------------------------------------------------
 
 .#{$reflex-prefix}grid--align-self-stretch {
-    align-self: stretch;
+  align-self: stretch;
 }
 
 .#{$reflex-prefix}grid--align-self-start {
-    align-self: flex-start;
+  align-self: flex-start;
 }
 
 .#{$reflex-prefix}grid--align-self-end {
-    align-self: flex-end;
-    vertical-align: bottom;
+  align-self: flex-end;
+  vertical-align: bottom;
 }
 
 .#{$reflex-prefix}grid--align-self-center {
-    align-self: center;
-    vertical-align: middle;
+  align-self: center;
+  vertical-align: middle;
 }
 
 .#{$reflex-prefix}grid--align-self-baseline {
-    align-self: baseline;
-    vertical-align: baseline;
+  align-self: baseline;
+  vertical-align: baseline;
 }
 
 // --------------------------------------------------
@@ -169,52 +169,52 @@
 // --------------------------------------------------
 
 .#{$reflex-prefix}grid--justify-start {
-    text-align: left;
-    justify-content: flex-start;
+  text-align: left;
+  justify-content: flex-start;
 }
 
 .#{$reflex-prefix}grid--justify-end {
-    text-align: right;
-    text-align-last: right;
-    justify-content: flex-end;
+  text-align: right;
+  text-align-last: right;
+  justify-content: flex-end;
 
-    .#{$reflex-prefix}grid__cell,
-    [class*="#{$reflex-prefix}grid__col-"] {
-        @include resetTextAlign();
-    }
+  .#{$reflex-prefix}grid__cell,
+  [class*="#{$reflex-prefix}grid__col-"] {
+    @include resetTextAlign();
+  }
 }
 
 .#{$reflex-prefix}grid--justify-center {
-    text-align: center;
-    text-align-last: center;
-    justify-content: center;
+  text-align: center;
+  text-align-last: center;
+  justify-content: center;
 
-    .#{$reflex-prefix}grid__cell,
-    [class*="#{$reflex-prefix}grid__col-"] {
-        @include resetTextAlign();
-    }
+  .#{$reflex-prefix}grid__cell,
+  [class*="#{$reflex-prefix}grid__col-"] {
+    @include resetTextAlign();
+  }
 }
 
 .#{$reflex-prefix}grid--justify-space-between {
-    text-align: justify;
-    text-align-last: justify;
-    justify-content: space-between;
+  text-align: justify;
+  text-align-last: justify;
+  justify-content: space-between;
 
-    .#{$reflex-prefix}grid__cell,
-    [class*="#{$reflex-prefix}grid__col-"] {
-        @include resetTextAlign();
-    }
+  .#{$reflex-prefix}grid__cell,
+  [class*="#{$reflex-prefix}grid__col-"] {
+    @include resetTextAlign();
+  }
 }
 
 .#{$reflex-prefix}grid--justify-space-around {
-    text-align: justify;
-    text-align-last: justify;
-    justify-content: space-around;
+  text-align: justify;
+  text-align-last: justify;
+  justify-content: space-around;
 
-    .#{$reflex-prefix}grid__cell,
-    [class*="#{$reflex-prefix}grid__col-"] {
-        @include resetTextAlign();
-    }
+  .#{$reflex-prefix}grid__cell,
+  [class*="#{$reflex-prefix}grid__col-"] {
+    @include resetTextAlign();
+  }
 }
 
 // --------------------------------------------------
@@ -222,7 +222,7 @@
 // --------------------------------------------------
 
 .#{$reflex-prefix}grid__col--bleed {
-    padding: 0;
+  padding: 0;
 }
 
 // --------------------------------------------------
@@ -230,35 +230,35 @@
 // --------------------------------------------------
 
 .#{$reflex-prefix}grid__cell--flex {
-    @include display-flex();
-    flex-direction: column;
+  @include display-flex();
+  flex-direction: column;
 }
 
 .#{$reflex-prefix}grid__cell--padding-sm {
-    padding: $reflex-cell-spacing-sm;
+  padding: $reflex-cell-spacing-sm;
 }
 
 .#{$reflex-prefix}grid__cell--padding-md {
-    padding: $reflex-cell-spacing-md;
+  padding: $reflex-cell-spacing-md;
 }
 
 .#{$reflex-prefix}grid__cell--padding-lg {
-    padding: $reflex-cell-spacing-lg;
+  padding: $reflex-cell-spacing-lg;
 }
 
 .#{$reflex-prefix}grid__cell-img {
-    display: block;
-    display: flex;
-    flex: 0 0 auto;
-    margin-left: 0;
-    margin-right: 0;
-    max-width: 100%;
-    width: 100%;
-    height: auto;
+  display: block;
+  display: flex;
+  flex: 0 0 auto;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .#{$reflex-prefix}grid__cell-footer {
-    @include display-flex();
-    width: 100%;
-    margin-top: auto;
+  @include display-flex();
+  width: 100%;
+  margin-top: auto;
 }

@@ -7,51 +7,48 @@
 // --------------------------------------------------
 
 @mixin make-reflex-grid($class) {
-    @include loop-reflex-columns($reflex-columns, $class, width);
+  @include loop-reflex-columns($reflex-columns, $class, width);
 }
 
 @mixin calc-reflex-columns($index, $class, $type) {
-    @if $type == width and $index > 0 {
-        .#{$reflex-prefix}#{$class}#{$index} {
-            width: percentage(($index / $reflex-columns));
-
-            //for ie6 support you can uncomment this line but it will increase css filesize dramatically
-            //@include setupCols();
-        }
+  @if $type == width and $index > 0 {
+    .#{$reflex-prefix}#{$class}#{$index} {
+      width: percentage(($index / $reflex-columns));
     }
+  }
 }
 
 @mixin loop-reflex-columns($index, $class, $type) {
-    @if $index >= 0 {
-        @include calc-reflex-columns($index, $class, $type);
-        // next iteration
-        @include loop-reflex-columns(($index - 1), $class, $type);
-    }
+  @if $index >= 0 {
+    @include calc-reflex-columns($index, $class, $type);
+    // next iteration
+    @include loop-reflex-columns(($index - 1), $class, $type);
+  }
 }
 
 // defaults for all cols
 @mixin setupCols($flex: false) {
-    @include whitespace();
-    position: relative;
-    width: 100%;
-    vertical-align: top;
-    padding: $reflex-grid-spacing;
+  @include whitespace();
+  position: relative;
+  width: 100%;
+  vertical-align: top;
+  padding: $reflex-grid-spacing;
 
-    @if $flex {
-        @include display-flex();
-        flex-direction: column;
-    } @else {
-        display: inline-block;
-        *display: inline;
-        zoom: 1;
-    }
+  @if $flex {
+    @include display-flex();
+    flex-direction: column;
+  } @else {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+  }
 }
 
 // defaults for auto cols
 @mixin setupAutoCols() {
-    flex: 1 0 auto;
-    width: auto !important;
-    max-width: 100%;
+  flex: 1 0 auto;
+  width: auto !important;
+  max-width: 100%;
 }
 
 // --------------------------------------------------
@@ -59,41 +56,41 @@
 // --------------------------------------------------
 
 @mixin whitespace($reset: true) {
-    @if $reflex-old-browser {
-        @if $reset {
-            letter-spacing: normal;
-            word-spacing: normal;
-            white-space: normal;
-        } @else {
-            letter-spacing: -0.31em !important;
-            *letter-spacing: normal !important;
-            word-spacing: -0.43em !important;
-        }
+  @if $reflex-old-browser {
+    @if $reset {
+      letter-spacing: normal;
+      word-spacing: normal;
+      white-space: normal;
+    } @else {
+      letter-spacing: -0.31em !important;
+      *letter-spacing: normal !important;
+      word-spacing: -0.43em !important;
     }
+  }
 }
 
 @mixin resetTextAlign() {
-    @if $reflex-old-browser {
-        // We want to reset any text-align properties set by the grid
-        // (required for the inline-block fallback)
-        // but we don't want to override any text-align properties
-        // set on the individual grid__col-x element
-        // or on any of it's child elements
-        //
-        // The "initial" property is not widely supported so a default of "left" and "start" is provided
-        // http://caniuse.com/#search=initial
-        //
-        // 1) set to left by default (works everywhere)
-        // 2) set to start (respects right to left text)
-        // 3) set to initial
+  @if $reflex-old-browser {
+    // We want to reset any text-align properties set by the grid
+    // (required for the inline-block fallback)
+    // but we don't want to override any text-align properties
+    // set on the individual grid__col-x element
+    // or on any of it's child elements
+    //
+    // The "initial" property is not widely supported so a default of "left" and "start" is provided
+    // http://caniuse.com/#search=initial
+    //
+    // 1) set to left by default (works everywhere)
+    // 2) set to start (respects right to left text)
+    // 3) set to initial
 
-        text-align: left;
-        text-align: start;
-        text-align: initial;
-        text-align-last: left;
-        text-align-last: start;
-        text-align-last: initial;
-    }
+    text-align: left;
+    text-align: start;
+    text-align: initial;
+    text-align-last: left;
+    text-align-last: start;
+    text-align-last: initial;
+  }
 }
 
 // --------------------------------------------------
@@ -101,17 +98,18 @@
 // --------------------------------------------------
 
 @mixin make-grid--order-helpers() {
-    @include loop-grid--order-helpers($reflex-columns);
+  @include loop-grid--order-helpers($reflex-columns);
 }
 
 @mixin loop-grid--order-helpers($index, $breakpoint: null) {
-    @if $index >= 0 {
-        .#{$reflex-prefix}grid--order#{$breakpoint}-#{$index} {
-            order: $index;
-        }
-        // next iteration
-        @include loop-grid--order-helpers(($index - 1), $breakpoint);
+  @if $index >= 0 {
+    .#{$reflex-prefix}grid--order#{$breakpoint}-#{$index} {
+      order: $index;
     }
+    // next iteration
+    @include loop-grid--order-helpers(($index - 1), $breakpoint);
+  }
+}
 
 // --------------------------------------------------
 // offset class generation mixins
@@ -155,8 +153,8 @@
 // ---
 
 @mixin display-flex() {
-    display: inline-block;
-    display: flex;
-    *display: inline;
-    zoom: 1;
+  display: inline-block;
+  display: flex;
+  *display: inline;
+  zoom: 1;
 }
