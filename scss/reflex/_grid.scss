@@ -134,50 +134,50 @@ _:-ms-fullscreen, :root .grid__cell {
 // reflex order helpers generation
 // --------------------------------------------------
 
-@include make-order-helpers();
+@include make-grid--order-helpers();
 
 @media only screen and (min-width: $reflex-xs) {
-  @include loop-order-helpers($reflex-columns, '-xs');
+  @include loop-grid--order-helpers($reflex-columns, '-xs');
 }
 
 @media only screen and (min-width: $reflex-sm) {
-  @include loop-order-helpers($reflex-columns, '-sm');
+  @include loop-grid--order-helpers($reflex-columns, '-sm');
 }
 
 @media only screen and (min-width: $reflex-md) {
-  @include loop-order-helpers($reflex-columns, '-md');
+  @include loop-grid--order-helpers($reflex-columns, '-md');
 }
 
 @media only screen and (min-width: $reflex-lg) {
-  @include loop-order-helpers($reflex-columns, '-lg');
+  @include loop-grid--order-helpers($reflex-columns, '-lg');
 }
 
 @media only screen and (min-width: $reflex-xlg) {
-  @include loop-order-helpers($reflex-columns, '-xlg');
+  @include loop-grid--order-helpers($reflex-columns, '-xlg');
 }
 
 // --------------------------------------------------
 // reflex offset helpers generation
 // --------------------------------------------------
 
-@include make-offset-helpers();
+@include make-grid--offset-helpers();
 
 @media only screen and (min-width: $reflex-xs) {
-  @include loop-offset-helpers($reflex-columns - 1, '-xs');
+  @include loop-grid--offset-helpers($reflex-columns - 1, '-xs');
 }
 
 @media only screen and (min-width: $reflex-sm) {
-  @include loop-offset-helpers($reflex-columns - 1, '-sm');
+  @include loop-grid--offset-helpers($reflex-columns - 1, '-sm');
 }
 
 @media only screen and (min-width: $reflex-md) {
-  @include loop-offset-helpers($reflex-columns - 1, '-md');
+  @include loop-grid--offset-helpers($reflex-columns - 1, '-md');
 }
 
 @media only screen and (min-width: $reflex-lg) {
-  @include loop-offset-helpers($reflex-columns - 1, '-lg');
+  @include loop-grid--offset-helpers($reflex-columns - 1, '-lg');
 }
 
 @media only screen and (min-width: $reflex-xlg) {
-  @include loop-offset-helpers($reflex-columns - 1, '-xlg');
+  @include loop-grid--offset-helpers($reflex-columns - 1, '-xlg');
 }
