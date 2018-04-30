@@ -112,6 +112,38 @@
         // next iteration
         @include loop-grid--order-helpers(($index - 1), $breakpoint);
     }
+
+// --------------------------------------------------
+// offset class generation mixins
+// --------------------------------------------------
+
+@mixin offset($index: 0) {
+  $offset: ($index / $reflex-columns);
+  // convert to percentage only if not zero
+  @if $offset != 0 {
+    $offset: percentage($offset);
+  }
+  margin-left: $offset;
+}
+
+@mixin make-offset-helpers() {
+  @include loop-offset-helpers($reflex-columns - 1);
+}
+
+@mixin loop-offset-helpers($index, $breakpoint: null) {
+  @if $index > 0 and $breakpoint == null {
+    .#{$reflex-prefix}grid--offset#{$breakpoint}-#{$index} {
+      @include offset($index);
+    }
+    // next iteration
+    @include loop-offset-helpers(($index - 1), $breakpoint);
+  } @else if $index >= 0 and $breakpoint != null {
+    .#{$reflex-prefix}grid--offset#{$breakpoint}-#{$index} {
+      @include offset($index);
+    }
+    // next iteration
+    @include loop-offset-helpers(($index - 1), $breakpoint);
+  }
 }
 
 // --------------------------------------------------
